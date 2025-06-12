@@ -135,8 +135,14 @@ def dfs_weighted(graph, start, goal, visited=None, path=None, total_weight=0):
 1. Xử lý chu trình (Đồ thị mẫu 2)
 - Các đồ thị trong thực tế thường có chu trình (ví dụ A -> B và B -> A). Nếu không có cơ chế kiểm soát, cả BFS và DFS sẽ bị kẹt trong một vòng lặp vô hạn, duyệt qua lại giữa các nút này và không bao giờ kết thúc.
 - Giải pháp: Sử dụng một tập hợp visited để lưu trữ các nút đã được khám phá. Trước khi thêm một nút kề vào hàng đợi/ngăn xếp, kiểm tra xem nó đã có trong visited chưa. Nếu rồi, thì bỏ qua.
-- Kết quả: Trong bài tập với Đồ thị mẫu 2, việc áp dụng visited đã giúp cả hai thuật toán hoạt động chính xác và tìm ra đường đi đến đích mà không bị lặp. 
-2. Hạn chế trên Đồ thị có Trọng số (Đồ thị mẫu 5 & 6)
+- Kết quả: Trong bài tập với Đồ thị mẫu 2, việc áp dụng visited đã giúp cả hai thuật toán hoạt động chính xác và tìm ra đường đi đến đích mà không bị lặp.
+- BFS tối ưu hơn về số lượng cạnh
+![image](https://github.com/user-attachments/assets/7cbc9504-3713-4c7f-9768-f478676bfe92)
+- DFS:
+![image](https://github.com/user-attachments/assets/61c6203e-be57-457e-aaf2-3db8cff88db2)
+
+
+2. Hạn chế trên Đồ thị có Trọng số (Đồ thị mẫu 6)
 - BFS và DFS vốn không quan tâm về trọng số của các cạnh. Chúng chỉ quan tâm đến cấu trúc liên kết. BFS tối ưu về số lượng cạnh, còn DFS đi theo thứ tự duyệt.
 - Ở đồ thị mẫu 6: Đường đi mà BFS và DFS tìm ra vô tình tối ưu về trọng số là S -> A -> B -> E -> H với tổng trọng số là 21 và BFS tìm được đường đi ngắn nhất về số lượng cạnh là 4.
 ![image](https://github.com/user-attachments/assets/2c0c9a1e-d65d-4c03-93e9-b1500627468d)
@@ -167,6 +173,11 @@ Kết quả: Thuật toán sau khi sửa chạy thành công và liệt kê ra r
   - Không có thuật toán nào "luôn luôn" nhanh hơn. Hiệu suất phụ thuộc rất nhiều vào cấu trúc đồ thị và vị trí của nút đích.
   - DFS thường nhanh hơn nếu đích nằm sâu trong một nhánh và thuật toán "may mắn" đi đúng nhánh đó trước.
   - BFS lại có lợi nếu đích ở gần điểm bắt đầu (độ sâu thấp), vì BFS tìm theo từng lớp và có thể gặp đích sớm hơn.
+  - Output Ở đồ thị mẫu 6 (có trọng số)
+![image](https://github.com/user-attachments/assets/4961f1c6-b1a9-4332-8e0c-0d6477d3274d)
+  - Output Ở đồ thị mẫu 7 (không có trọng số)
+![image](https://github.com/user-attachments/assets/a395f18a-eb7c-4e9f-bf87-4b4793d5dfb4)
+
   - Về phần bộ nhớ, thì DFS thường sẽ chiếm bộ nhớ ít hơn do khi duyệt thì nó chỉ cần lưu đường đi hiện tại dựa trên chiều sâu, còn BFS thì cần nhiều bộ nhớ hơn do phải lưu tất cả các đỉnh ở cùng mức.
 
 
