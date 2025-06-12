@@ -160,6 +160,7 @@ def dfs_weighted(graph, start, goal, visited=None, path=None, total_weight=0):
                 queue.append(new_path)
 ```
 Kết quả: Thuật toán sau khi sửa chạy thành công và liệt kê ra rất nhiều đường đi khác nhau từ S đến H trong Đồ thị mẫu 7. 
+
 4. So sánh hiệu suất (Bài tập nâng cao)
 - Phương pháp: Sử dụng thư viện time để đo thời gian thực thi của BFS và DFS trên các đồ thị phức tạp (mẫu 6 và 7).
 - Kết quả phân tích:
