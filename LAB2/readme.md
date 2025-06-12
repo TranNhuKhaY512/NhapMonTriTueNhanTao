@@ -6,7 +6,7 @@
 + time: Dùng để đo lường và so sánh thời gian chạy của các thuật toán.
 ```python
 from collections import deque
-----
+
 import time
 ```
 ## Các thuật toán sử dụng:
