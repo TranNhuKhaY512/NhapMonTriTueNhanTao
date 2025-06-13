@@ -158,7 +158,7 @@ def dfs_weighted(graph, start, goal, visited=None, path=None, total_weight=0):
 - Ở đồ thị mẫu 6: Đường đi mà BFS và DFS tìm ra vô tình tối ưu về trọng số là S -> A -> B -> E -> H với tổng trọng số là 21 và BFS tìm được đường đi ngắn nhất về số lượng cạnh là 4.
 ![image](https://github.com/user-attachments/assets/2c0c9a1e-d65d-4c03-93e9-b1500627468d)
 
--Biểu diễn đồ thị mẫu 6 theo BFS hiển thị trên web (dùng framework Streamlit)
+- Biểu diễn đồ thị mẫu 6 theo BFS hiển thị trên web (dùng framework Streamlit)
 ![image](https://github.com/user-attachments/assets/5cb73eba-f8be-4bad-9a5b-35609bbdeba9)
 
 -Biểu diễn đồ thị mẫu 6 theo DFS hiển thị trên web (dùng framework Streamlit)
@@ -242,8 +242,8 @@ H ->|6| J
 - Kết quả của BFS và DFS ở đồ thị mẫu 8 cho thấy được cả 2 thuật toán đều vô tình tìm được đường đi có số cạnh bằng nhau nhưng khác nhau về trọng số.
 ![image](https://github.com/user-attachments/assets/842cd481-bab9-4ae8-bdad-1674f2e55498)
 
--Biểu diễn đồ thị mẫu 8 theo BFS hiển thị trên web (dùng framework Streamlit)
+- Biểu diễn đồ thị mẫu 8 theo BFS hiển thị trên web (dùng framework Streamlit)
 ![image](https://github.com/user-attachments/assets/708483bd-f936-496d-8c11-263da9837c89)
 
--Biểu diễn đồ thị mẫu 8 theo DFS hiển thị trên web (dùng framework Streamlit)
+- Biểu diễn đồ thị mẫu 8 theo DFS hiển thị trên web (dùng framework Streamlit)
 ![image](https://github.com/user-attachments/assets/ba14a50c-0d12-40ae-8b57-62b3608fa947)
