@@ -146,8 +146,18 @@ def dfs_weighted(graph, start, goal, visited=None, path=None, total_weight=0):
 - BFS và DFS vốn không quan tâm về trọng số của các cạnh. Chúng chỉ quan tâm đến cấu trúc liên kết. BFS tối ưu về số lượng cạnh, còn DFS đi theo thứ tự duyệt.
 - Ở đồ thị mẫu 6: Đường đi mà BFS và DFS tìm ra vô tình tối ưu về trọng số là S -> A -> B -> E -> H với tổng trọng số là 21 và BFS tìm được đường đi ngắn nhất về số lượng cạnh là 4.
 ![image](https://github.com/user-attachments/assets/2c0c9a1e-d65d-4c03-93e9-b1500627468d)
+-Biểu diễn đồ thị mẫu 7 theo BFS:
+![image](https://github.com/user-attachments/assets/f4c9dbbd-7904-487d-81dd-c52182de888e)
+- Biểu diễn đồ thị mẫu 7 theo DFS:
+![image](https://github.com/user-attachments/assets/1d62f2fd-0175-44a4-a550-9e7e42337ca2)
+
 - Trong bài tập, khi yêu cầu thêm một cạnh mới B -> H với trọng số 20, BFS ngay lập tức tìm ra đường đi S -> A -> B -> H. Đường này chỉ có 3 cạnh (ngắn hơn đường cũ 4 cạnh) nhưng tổng trọng số lại là 25, cao hơn và không tối ưu.
 ![image](https://github.com/user-attachments/assets/b85f22ad-9e8b-4c27-ac24-a9a1f5a94f1c)
+
+
+- Biểu diễn đồ thị mẫu 7 theo DFS
+![image](https://github.com/user-attachments/assets/39195e6a-11a2-4c35-914d-cefb1a0221d5)
+
 
   
 3. Tìm tất cả các đường đi (Đồ thị mẫu 7)
@@ -177,8 +187,6 @@ Kết quả: Thuật toán sau khi sửa chạy thành công và liệt kê ra r
 ![image](https://github.com/user-attachments/assets/4961f1c6-b1a9-4332-8e0c-0d6477d3274d)
   - Output Ở đồ thị mẫu 7 (không có trọng số)
 ![image](https://github.com/user-attachments/assets/a395f18a-eb7c-4e9f-bf87-4b4793d5dfb4)
-
   - Về phần bộ nhớ, thì DFS thường sẽ chiếm bộ nhớ ít hơn do khi duyệt thì nó chỉ cần lưu đường đi hiện tại dựa trên chiều sâu, còn BFS thì cần nhiều bộ nhớ hơn do phải lưu tất cả các đỉnh ở cùng mức.
-
-![image](https://github.com/user-attachments/assets/b979864d-e6fb-461b-8abc-78d2ae0f440a)
+![@2l9l2aa8ucl0igj on Twitter](https://github.com/user-attachments/assets/2bb4621c-ebcf-41fe-945c-0d4c1a31071f)
 
