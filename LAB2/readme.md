@@ -1,6 +1,6 @@
 
 ## Các công nghệ được sử dụng
-#### Ngôn ngữ: Python 3
+#### Ngôn ngữ: Python 
 #### Môi trường: Jupyter Notebook 
 #### Thư viện:
 + collections.deque: Cung cấp cấu trúc dữ liệu hàng đợi (queue) hiệu suất cao, trong bài này, nó được sử dụng để triển khai thuật toán BFS một cách hiệu quả nhờ tốc độ thêm/xóa phần tử ở hai đầu nhanh.
