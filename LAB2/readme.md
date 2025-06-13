@@ -145,12 +145,12 @@ def dfs_weighted(graph, start, goal, visited=None, path=None, total_weight=0):
 - BFS tối ưu hơn về số lượng cạnh
 ![image](https://github.com/user-attachments/assets/7cbc9504-3713-4c7f-9768-f478676bfe92)
 
--Biểu diễn đồ thị mẫu 2 theo BFS hiển thị trên web (dùng framework Streamlit)
+- Biểu diễn đồ thị mẫu 2 theo BFS hiển thị trên web (dùng framework Streamlit)
 ![image](https://github.com/user-attachments/assets/748f5f36-0fa7-4331-8a95-6b9e405ced7d)
 
 - DFS:
 ![image](https://github.com/user-attachments/assets/61c6203e-be57-457e-aaf2-3db8cff88db2)
--Biểu diễn đồ thị mẫu 2 theo DFS hiển thị trên web (dùng framework Streamlit)
+- Biểu diễn đồ thị mẫu 2 theo DFS hiển thị trên web (dùng framework Streamlit)
 ![image](https://github.com/user-attachments/assets/a0946538-e4a4-46a6-a412-6d45825e5560)
 
 
@@ -162,7 +162,7 @@ def dfs_weighted(graph, start, goal, visited=None, path=None, total_weight=0):
 - Biểu diễn đồ thị mẫu 6 theo BFS hiển thị trên web (dùng framework Streamlit)
 ![image](https://github.com/user-attachments/assets/5cb73eba-f8be-4bad-9a5b-35609bbdeba9)
 
--Biểu diễn đồ thị mẫu 6 theo DFS hiển thị trên web (dùng framework Streamlit)
+- Biểu diễn đồ thị mẫu 6 theo DFS hiển thị trên web (dùng framework Streamlit)
 ![image](https://github.com/user-attachments/assets/9d920c7e-1a01-43b5-8dda-8b37b81e5e48)
 
 
@@ -172,12 +172,15 @@ def dfs_weighted(graph, start, goal, visited=None, path=None, total_weight=0):
 ![image](https://github.com/user-attachments/assets/344fdc37-0e96-43c1-99f5-72aeb0573c96)
 
 - Biểu diễn đồ thị mẫu 6 theo DFS hiển thị trên web (dùng framework Streamlit)
+
 ![image](https://github.com/user-attachments/assets/d8d4db3c-4cee-484a-9ac5-ea8559566e91)
 
--Biểu diễn đồ thị mẫu 7 theo BFS hiển thị trên web (dùng framework Streamlit)
+- Biểu diễn đồ thị mẫu 7 theo BFS hiển thị trên web (dùng framework Streamlit)
+  
 ![image](https://github.com/user-attachments/assets/e4b95afc-1362-45a4-b206-260ca43a4d1e)
 
 - Biểu diễn đồ thị mẫu 7 theo DFS hiển thị trên web (dùng framework Streamlit)
+
 ![image](https://github.com/user-attachments/assets/13a2e032-9dc8-4089-9cbf-d90165bfa270)
 
 3. Tìm tất cả các đường đi (Đồ thị mẫu 7)
