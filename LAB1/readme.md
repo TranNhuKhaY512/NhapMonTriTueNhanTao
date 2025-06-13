@@ -4,10 +4,15 @@
 #### Thư viện:
 + collections.deque: Cung cấp cấu trúc dữ liệu hàng đợi (queue) hiệu suất cao, trong bài này, nó được sử dụng để triển khai thuật toán BFS một cách hiệu quả nhờ tốc độ thêm/xóa phần tử ở hai đầu nhanh.
 + time: Dùng để đo lường và so sánh thời gian chạy của các thuật toán.
++ streamlit: là một thư viện tạo giao diện web nhanh cho Python, thường dùng để trình bày kết quả của AI/Data Science được ứng dụng để tạo giao diện nhập đồ thị, chọn thuật toán, hiển thị kết quả đồ họa trên web.
++ NetworkX:  là thư viện mạnh để xử lý đồ thị (graph): biểu diễn, vẽ, tính toán, tìm đường,...ứng dụng trong biểu diễn đồ thị, vẽ các đỉnh và cạnh, thêm trọng số.
++ matplotlib.pyplot là thư viện vẽ biểu đồ/đồ thị 2D. Ứng dụng vẽ đồ thị từ networkx rồi chuyển thành ảnh để hiển thị bằng Streamlit
 ```python
 from collections import deque
-
 import time
+import streamlit as st
+import networkx as nx
+import matplotlib.pyplot as plt
 ```
 ## Các thuật toán sử dụng:
 #### Trong bài này sử dụng 2 thuật toán chính :
@@ -138,28 +143,42 @@ def dfs_weighted(graph, start, goal, visited=None, path=None, total_weight=0):
 - Kết quả: Trong bài tập với Đồ thị mẫu 2, việc áp dụng visited đã giúp cả hai thuật toán hoạt động chính xác và tìm ra đường đi đến đích mà không bị lặp.
 - BFS tối ưu hơn về số lượng cạnh
 ![image](https://github.com/user-attachments/assets/7cbc9504-3713-4c7f-9768-f478676bfe92)
+
+-Biểu diễn đồ thị mẫu 2 theo BFS hiển thị trên web (dùng framework Streamlit)
+![image](https://github.com/user-attachments/assets/748f5f36-0fa7-4331-8a95-6b9e405ced7d)
+
 - DFS:
 ![image](https://github.com/user-attachments/assets/61c6203e-be57-457e-aaf2-3db8cff88db2)
+-Biểu diễn đồ thị mẫu 2 theo DFS hiển thị trên web (dùng framework Streamlit)
+![image](https://github.com/user-attachments/assets/a0946538-e4a4-46a6-a412-6d45825e5560)
 
 
 2. Hạn chế trên Đồ thị có Trọng số (Đồ thị mẫu 6)
 - BFS và DFS vốn không quan tâm về trọng số của các cạnh. Chúng chỉ quan tâm đến cấu trúc liên kết. BFS tối ưu về số lượng cạnh, còn DFS đi theo thứ tự duyệt.
 - Ở đồ thị mẫu 6: Đường đi mà BFS và DFS tìm ra vô tình tối ưu về trọng số là S -> A -> B -> E -> H với tổng trọng số là 21 và BFS tìm được đường đi ngắn nhất về số lượng cạnh là 4.
 ![image](https://github.com/user-attachments/assets/2c0c9a1e-d65d-4c03-93e9-b1500627468d)
--Biểu diễn đồ thị mẫu 7 theo BFS:
-![image](https://github.com/user-attachments/assets/f4c9dbbd-7904-487d-81dd-c52182de888e)
-- Biểu diễn đồ thị mẫu 7 theo DFS:
-![image](https://github.com/user-attachments/assets/1d62f2fd-0175-44a4-a550-9e7e42337ca2)
+
+-Biểu diễn đồ thị mẫu 6 theo BFS hiển thị trên web (dùng framework Streamlit)
+![image](https://github.com/user-attachments/assets/5cb73eba-f8be-4bad-9a5b-35609bbdeba9)
+
+-Biểu diễn đồ thị mẫu 6 theo DFS hiển thị trên web (dùng framework Streamlit)
+![image](https://github.com/user-attachments/assets/9d920c7e-1a01-43b5-8dda-8b37b81e5e48)
+
 
 - Trong bài tập, khi yêu cầu thêm một cạnh mới B -> H với trọng số 20, BFS ngay lập tức tìm ra đường đi S -> A -> B -> H. Đường này chỉ có 3 cạnh (ngắn hơn đường cũ 4 cạnh) nhưng tổng trọng số lại là 25, cao hơn và không tối ưu.
 ![image](https://github.com/user-attachments/assets/b85f22ad-9e8b-4c27-ac24-a9a1f5a94f1c)
+-Biểu diễn đồ thị mẫu 6 theo BFS hiển thị trên web (dùng framework Streamlit)
+![image](https://github.com/user-attachments/assets/344fdc37-0e96-43c1-99f5-72aeb0573c96)
 
+- Biểu diễn đồ thị mẫu 6 theo DFS hiển thị trên web (dùng framework Streamlit)
+![image](https://github.com/user-attachments/assets/d8d4db3c-4cee-484a-9ac5-ea8559566e91)
 
-- Biểu diễn đồ thị mẫu 7 theo DFS
-![image](https://github.com/user-attachments/assets/39195e6a-11a2-4c35-914d-cefb1a0221d5)
+-Biểu diễn đồ thị mẫu 7 theo BFS hiển thị trên web (dùng framework Streamlit)
+![image](https://github.com/user-attachments/assets/e4b95afc-1362-45a4-b206-260ca43a4d1e)
 
+- Biểu diễn đồ thị mẫu 7 theo DFS hiển thị trên web (dùng framework Streamlit)
+![image](https://github.com/user-attachments/assets/13a2e032-9dc8-4089-9cbf-d90165bfa270)
 
-  
 3. Tìm tất cả các đường đi (Đồ thị mẫu 7)
 - Yêu cầu: Sửa đổi thuật toán để tìm tất cả các đường đi có thể từ S đến H.
 - Giải pháp: cần phải thay đổi thuật toán duyệt. Thay vì dừng lại ngay khi tìm thấy đỉnh H, thuật toán sẽ lưu lại đường đi hiện tại và tiếp tục tìm các nhánh khác. Đồng thời, điều kiện để tránh lặp cũng phải thay đổi: thay vì dùng visited toàn cục, ta chỉ cần đảm bảo một nút không xuất hiện lặp lại trên cùng một đường đi (if neighbor not in path).
@@ -175,10 +194,17 @@ def dfs_weighted(graph, start, goal, visited=None, path=None, total_weight=0):
                 # Thêm đường đi mới này vào cuối hàng đợi 
                 queue.append(new_path)
 ```
-Kết quả: Thuật toán sau khi sửa chạy thành công và liệt kê ra rất nhiều đường đi khác nhau từ S đến H trong Đồ thị mẫu 7. 
+Kết quả: Thuật toán sau khi sửa chạy thành công và liệt kê ra rất nhiều đường đi khác nhau từ S đến H trong Đồ thị mẫu 7.
+
 
 4. So sánh hiệu suất (Bài tập nâng cao)
 - Phương pháp: Sử dụng thư viện time để đo thời gian thực thi của BFS và DFS trên các đồ thị phức tạp (mẫu 6 và 7).
+- Dùng hàm time.perf_counter() - là một hàm trong module time dùng để đo thời gian chính xác cao (tính bằng giây).
+```python
+start_time_bfs = time.perf_counter()
+path, weight = bfs(graph6, 'S', 'H')
+end_time_bfs = time.perf_counter()
+```
 - Kết quả phân tích:
   - Không có thuật toán nào "luôn luôn" nhanh hơn. Hiệu suất phụ thuộc rất nhiều vào cấu trúc đồ thị và vị trí của nút đích.
   - DFS thường nhanh hơn nếu đích nằm sâu trong một nhánh và thuật toán "may mắn" đi đúng nhánh đó trước.
@@ -190,3 +216,34 @@ Kết quả: Thuật toán sau khi sửa chạy thành công và liệt kê ra r
   - Về phần bộ nhớ, thì DFS thường sẽ chiếm bộ nhớ ít hơn do khi duyệt thì nó chỉ cần lưu đường đi hiện tại dựa trên chiều sâu, còn BFS thì cần nhiều bộ nhớ hơn do phải lưu tất cả các đỉnh ở cùng mức.
 ![@2l9l2aa8ucl0igj on Twitter](https://github.com/user-attachments/assets/2bb4621c-ebcf-41fe-945c-0d4c1a31071f)
 
+5. Đồ thị mẫu 8 ( tự thiết kế đồ thị có trọng số )
+- Sử dụng cả hai thuật toán BFS và DFS để tìm đường đi.
+- Đồ thị
+```mermaid
+graph TD
+S ->|2| A
+S ->|5| B
+S ->|4| C
+A ->|4| D
+A ->|7| F
+B ->|8| E
+B ->|3| F
+B ->|6| G
+C ->|10| E
+C ->|3| G
+D ->|5| G
+E ->|2| G
+E ->|15| H
+F ->|5| I
+G ->|4| I
+I ->|3| J
+H ->|6| J
+```
+- Kết quả của BFS và DFS ở đồ thị mẫu 8 cho thấy được cả 2 thuật toán đều vô tình tìm được đường đi có số cạnh bằng nhau nhưng khác nhau về trọng số.
+![image](https://github.com/user-attachments/assets/842cd481-bab9-4ae8-bdad-1674f2e55498)
+
+-Biểu diễn đồ thị mẫu 8 theo BFS hiển thị trên web (dùng framework Streamlit)
+![image](https://github.com/user-attachments/assets/708483bd-f936-496d-8c11-263da9837c89)
+
+-Biểu diễn đồ thị mẫu 8 theo DFS hiển thị trên web (dùng framework Streamlit)
+![image](https://github.com/user-attachments/assets/ba14a50c-0d12-40ae-8b57-62b3608fa947)
