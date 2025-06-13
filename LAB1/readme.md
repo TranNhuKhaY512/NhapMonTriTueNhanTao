@@ -214,13 +214,12 @@ end_time_bfs = time.perf_counter()
   - Output Ở đồ thị mẫu 7 (không có trọng số)
 ![image](https://github.com/user-attachments/assets/a395f18a-eb7c-4e9f-bf87-4b4793d5dfb4)
   - Về phần bộ nhớ, thì DFS thường sẽ chiếm bộ nhớ ít hơn do khi duyệt thì nó chỉ cần lưu đường đi hiện tại dựa trên chiều sâu, còn BFS thì cần nhiều bộ nhớ hơn do phải lưu tất cả các đỉnh ở cùng mức.
-![@2l9l2aa8ucl0igj on Twitter](https://github.com/user-attachments/assets/2bb4621c-ebcf-41fe-945c-0d4c1a31071f)
+
 
 5. Đồ thị mẫu 8 ( tự thiết kế đồ thị có trọng số )
 - Sử dụng cả hai thuật toán BFS và DFS để tìm đường đi.
-- Đồ thị
-```mermaid
-graph TD
+- Đồ thị:
+```graph TD
 S ->|2| A
 S ->|5| B
 S ->|4| C
@@ -239,7 +238,7 @@ G ->|4| I
 I ->|3| J
 H ->|6| J
 ```
-- Kết quả của BFS và DFS ở đồ thị mẫu 8 cho thấy được cả 2 thuật toán đều vô tình tìm được đường đi có số cạnh bằng nhau nhưng khác nhau về trọng số.
+- Kết quả của BFS và DFS ở đồ thị mẫu 8 cho thấy được là BFS tìm đường đi ngắn theo số bước; đường đi tìm được: S → A → F → I → J; tổng trọng số: 17 . Còn DFS tìm theo chiều sau; đường đi tìm được: S → A → D → G → I → J; tổng trọng số: 18
 ![image](https://github.com/user-attachments/assets/842cd481-bab9-4ae8-bdad-1674f2e55498)
 
 - Biểu diễn đồ thị mẫu 8 theo BFS hiển thị trên web (dùng framework Streamlit)
