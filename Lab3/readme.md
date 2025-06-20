@@ -99,11 +99,11 @@ if __name__ == "__main__":
 - Đường chéo
 3. Quy trình giải :
 - Nhập N – số quân hậu và kích thước bàn cờ N x N
--Duyệt từng hàng, tìm cột hợp lệ để đặt quân hậu:
+- Duyệt từng hàng, tìm cột hợp lệ để đặt quân hậu:
     - Không trùng cột
     - Không trùng đường chéo
--Thử đặt quân hậu, sau đó:
-    -Gọi đệ quy để đặt quân hậu tiếp theo
+- Thử đặt quân hậu, sau đó:
+    - Gọi đệ quy để đặt quân hậu tiếp theo
     - Nếu đủ N quân hậu → lưu lời giải
 - Backtrack – bỏ vị trí vừa đặt để thử vị trí khác.
 - In kết quả – số lời giải, bàn cờ, tọa độ các quân hậu.
