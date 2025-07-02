@@ -70,7 +70,7 @@ fitness_function(x) = math.sin(x) + math.cos(x)
 
 ### Một số hàm quan trọng:
 - `initialize_population()`: Khởi tạo quần thể ban đầu ngẫu nhiên.
-- `select_parents()`: Lựa chọn cá thể theo Tournament Selection.
+- `select_parents()`: Lựa chọn cá thể theo Tournament Selection hoặc Roulette Wheel.
 - `crossover()`: Lai ghép 2 cá thể.
 - `mutate()`: Đột biến cá thể.
 - `genetic_algorithm_example1()`: Hàm chính thực hiện GA, lặp qua nhiều thế hệ.
