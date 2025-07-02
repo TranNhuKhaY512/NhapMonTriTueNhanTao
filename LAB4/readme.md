@@ -1,4 +1,4 @@
-# Thuật Toán Di Truyền (Genetic Algorithm)
+# Thực hành: Thuật toán di truyền (Genetic Algorithm)
 ## Sinh viên thực hiện: 
 - Trần Như Khả Ý  
 - Mã SV: 2374802010582  
