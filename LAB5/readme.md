@@ -78,9 +78,9 @@ P(i, j) = \max(I(2i:2i+2, 2j:2j+2))
 - `x`: Vector từ feature map duỗi ra.
 - `W`: Ma trận trọng số.
 - `b`: Bias (độ lệch).
-**Bước cuối - Softmax**: Chuyển $y$ thành xác suất dự đoán.
-**Giải thích đơn giản**: Lấy feature map cuối, "duỗi" thành một hàng số, rồi nhân với trọng số để ra kết quả phân loại.
-**Ý nghĩa**: Tầng này giống như "bộ não" quyết định, dựa trên các đặc trưng đã tìm được.
+- **Bước cuối - Softmax**: Chuyển $y$ thành xác suất dự đoán.
+- **Giải thích đơn giản**: Lấy feature map cuối, "duỗi" thành một hàng số, rồi nhân với trọng số để ra kết quả phân loại.
+- **Ý nghĩa**: Tầng này giống như "bộ não" quyết định, dựa trên các đặc trưng đã tìm được.
   ---
 ### 3. Tổng hợp lại cả quy trình CNN
 1. **Tích chập**: Tìm đặc trưng như đường ngang → Feature map $S$.
