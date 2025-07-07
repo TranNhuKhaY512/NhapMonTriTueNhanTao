@@ -19,19 +19,17 @@
   - `torchvision.transforms`: Thực hiện các phép biến đổi ảnh như chuyển tensor, chuẩn hóa.
 ---
 ## Mục tiêu
-- Hiểu rõ nguyên lý hoạt động của thuật toán di truyền.
-- Áp dụng thuật toán để giải các bài toán tối ưu hóa một biến.
-- Phân tích và trực quan hóa kết quả.
-- Thực hành mở rộng để nâng cao kỹ năng lập trình thuật toán tiến hóa.
+- Hiểu rõ vai trò và cơ chế hoạt động của từng thành phần trong CNN.
+- Biết cách sử dụng tích chập, ReLU, pooling để xử lý ảnh.
+- Biết áp dụng CNN để trích xuất đặc trưng và phân loại ảnh.
+- Có thể giải thích quy trình nhận diện ảnh số đơn giản như “7” và các số khác (chữ viết tay) bằng CNN.
 ---
 ## Tổng quan lý thuyết
 ## 1. CNN là gì?
 CNN (Convolutional Neural Network) là một loại mạng nơ-ron nhân tạo giúp máy tính "nhìn" và hiểu ảnh, tương tự cách con người nhận diện vật thể trong đời thực. Thay vì xem toàn bộ ảnh một lúc như mạng nơ-ron thông thường (fully connected), CNN chia nhỏ ảnh ra, tìm các đặc trưng như đường thẳng, góc, vòng tròn, rồi ghép lại để đoán xem ảnh đó là gì.
-
 **Ví dụ**: Khi ta nhìn một con mèo, không cần xem hết cả ảnh ngay lập tức. Ta nhận ra tai mèo (hình tam giác), mắt mèo (hình tròn), ria mèo (đường thẳng), rồi kết luận "Đây là mèo". CNN cũng làm như vậy bằng cách dùng các "kính lúp" nhỏ quét qua ảnh từng phần một.
 ---
 ## 2. Các thành phần chính của CNN
-
 ### 2.1. Tầng tích chập (Convolution Layer)
 Đây là bước quan trọng nhất, giống như "đôi mắt" của CNN, giúp tìm các đặc trưng nhỏ trong ảnh như cạnh, góc, hoặc đường cong.
 #### Ý tưởng cơ bản
@@ -40,12 +38,22 @@ CNN (Convolutional Neural Network) là một loại mạng nơ-ron nhân tạo g
 - Kết quả là một **feature map** (bản đồ đặc trưng), cho biết chỗ nào trong ảnh có đặc trưng mà bộ lọc tìm được.
 #### Công thức tích chập
 Công thức toán học của tích chập là:
-$$ S(i, j) = \sum_{m=0}^{F-1} \sum_{n=0}^{F-1} I(i+m, j+n) \cdot K(m, n) $$
+```math
+S(i, j) = \sum_{m=0}^{F-1} \sum_{n=0}^{F-1} I(i+m, j+n) \cdot K(m, n)
+```
+- `I`: Ảnh đầu vào (input image).
+- `K`: Bộ lọc (kernel/filter).
+- `F`: Kích thước bộ lọc (ví dụ $F=3$ nếu là $3 \times 3$).
+- `S(i, j)`: Giá trị tại vị trí $(i, j)$ trong feature map.
 
-- $I$: Ảnh đầu vào (input image).
-- $K$: Bộ lọc (kernel/filter).
-- $F$: Kích thước bộ lọc (ví dụ $F=3$ nếu là $3 \times 3$).
-- $S(i, j)$: Giá trị tại vị trí $(i, j)$ trong feature map.
+### 2.2. Hàm kích hoạt (ReLU)
+- Sau khi có feature map từ tầng tích chập, ta dùng hàm ReLU để "lọc" nó, giữ lại các đặc trưng rõ ràng và loại bỏ những phần không quan trọng.
+#### Công thức
+$$ \text{ReLU}(x) = \max(0, x) $$
+
+**Giải thích đơn giản**:
+- Nếu số lớn hơn 0, giữ nguyên.
+- Nếu số nhỏ hơn hoặc bằng 0, biến thành 0.
 ### 2.Các bước cơ bản:
 1. **Tích chập**: Tìm đặc trưng như đường ngang → Feature map $S$.
 2. **ReLU**: Lọc bỏ các nét mờ (giá trị âm) → Feature map $S_relu$.
