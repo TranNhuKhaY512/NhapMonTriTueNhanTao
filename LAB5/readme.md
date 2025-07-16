@@ -48,7 +48,7 @@ S(i, j) = \sum_{m=0}^{F-1} \sum_{n=0}^{F-1} I(i+m, j+n) \cdot K(m, n)
 - Sau khi có feature map từ tầng tích chập, ta dùng hàm ReLU để "lọc" nó, giữ lại các đặc trưng rõ ràng và loại bỏ những phần không quan trọng.
 #### Công thức
 ```math
- \text{ReLU}(x) = \max(0, x) $$
+ \text{ReLU}(x) = \max(0, x) 
 ```
 **Giải thích đơn giản**:
 - Nếu số lớn hơn 0, giữ nguyên.
@@ -73,7 +73,7 @@ P(i, j) = \max(I(2i:2i+2, 2j:2j+2))
 - Đây là bước cuối cùng, nơi CNN ghép tất cả đặc trưng lại để đoán xem ảnh là gì.
 #### Công thức
 ```math
- y = Wx + b $$
+ y = Wx + b 
 ```
 - `x`: Vector từ feature map duỗi ra.
 - `W`: Ma trận trọng số.
