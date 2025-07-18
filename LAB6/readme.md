@@ -92,7 +92,7 @@ model.fit(X, y)
             st.markdown("<div class='info-label'>TỶ LỆ Na/K</div>", unsafe_allow_html=True)
             na_to_k_input = st.text_input("", value="15.0")
 ```
-<img width="1040" height="1161" alt="image" src="https://github.com/user-attachments/assets/236b5a26-6ffb-46aa-8288-3cb4c7aa9caa" />
+<img width="520" height="640" alt="image" src="https://github.com/user-attachments/assets/236b5a26-6ffb-46aa-8288-3cb4c7aa9caa" />
 
 - Ví dụ: cho người dùng điền đầy đủ các mục lấy dữ liệu từ file drug200.csv -> submit thì sẽ hiện kết quả như hình bên dưới gồm kết quả loại thuốc dự đoán và biểu đồ xác suất dự đoán xác suất cho từng loại thuốc. 
 <img width="2470" height="1250" alt="image" src="https://github.com/user-attachments/assets/c213808c-2863-4b28-b287-7c78736f8f49" />
