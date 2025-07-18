@@ -89,13 +89,14 @@ model.fit(X, y)
             bp = st.radio("", ['LOW', 'NORMAL', 'HIGH'])
             st.markdown("<div class='info-label'>CHOLESTEROL</div>", unsafe_allow_html=True)
             cholesterol = st.radio("", ['NORMAL', 'HIGH']
-            st.markdown("<div class='info-label'>TỶ LỆ Na/K/div>", unsafe_allow_html=True)
+            st.markdown("<div class='info-label'>TỶ LỆ Na/K</div>", unsafe_allow_html=True)
             na_to_k_input = st.text_input("", value="15.0")
 ```
 <img width="996" height="1147" alt="image" src="https://github.com/user-attachments/assets/cde592a1-a5a2-4ba5-b143-3b72be931beb" />
 
 - Ví dụ: cho người dùng điền đầy đủ các mục lấy dữ liệu từ file drug200.csv -> submit thì sẽ hiện kết quả như hình bên dưới gồm kết quả loại thuốc dự đoán và biểu đồ xác suất dự đoán xác suất cho từng loại thuốc. 
-<img width="2528" height="1152" alt="image" src="https://github.com/user-attachments/assets/a81537c9-e3cf-4cc0-92c9-b595a1c82606" />
+<img width="2470" height="1250" alt="image" src="https://github.com/user-attachments/assets/c213808c-2863-4b28-b287-7c78736f8f49" />
+
 
 
 
