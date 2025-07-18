@@ -49,7 +49,58 @@ def train_model():
 ```
 - Giao diện streamlit :
 - Câu lệnh run : streamlit run "filenam".py
-<img width="2552" height="1370" alt="image" src="https://github.com/user-attachments/assets/25962793-13de-4fde-a113-5fa16c6766ea" />
+- Giao diện người dùng nhập liệu :
+  ```python
+  user_input = st.text_area("Nhập văn bản", height=150, placeholder="Ví dụ: The environment here is very supportive and encouraging.")
+  ```
+  <img width="1355" height="401" alt="image" src="https://github.com/user-attachments/assets/90e09d93-f340-421b-b3b7-bac82a5bc43a" />
+
+- Ví dụ: cho nhập vào dữ liệu "Teacher tenure policies aim to protect educators, but they also hinder accountability" từ file Education.csv -> submit thì sẽ hiện kết quả như hình bên dưới gồm kết quả (positive / negative), độ tin cậy, đường cong ROC và biểu đồ phân hóa xác suất.
+- Phân bố xác suất: xác suất của positve và negative của văn bản
+- Đường cong ROC: 
+  - Trục y là TPR (True Positive Rate/ Recall), trục x là FPR (False Positive Rate).
+  - FPR là tỉ lệ các mẫu Negative bị phân loại sai thành Positive,
+<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/1fbadbf4-27a5-4f52-a99c-8750b15ed615" />
+
+### Exercise 2: Áp dụng thuật toán Naive Bayes (phân phối Gaussian) để dự đoán kết quả loại thuốc phù hợp với bệnh nhân.
+- Code chính:
+  - Khởi tạo hàm load_data() để đọc dữ liệu từ file Education.csv
+```python
+def load_data():
+    return pd.read_csv("drug200.csv")
+```
+  - Huấn luyện mô hình:
+```python
+X = encoded_data.drop('Drug', axis=1)
+y = encoded_data['Drug']
+
+model = GaussianNB()
+model.fit(X, y)
+```
+- Giao diện streamlit :
+- Câu lệnh run : streamlit run "filenam".py
+- Giao diện người dùng nhập liệu:
+```python
+     st.markdown("<div class='info-label'>TUỔI</div>", unsafe_allow_html=True)
+            age_input = st.text_input("", value="30")
+            st.markdown("<div class='info-label'>GIỚI TÍNH</div>", unsafe_allow_html=True)
+            sex = st.radio("", ['M', 'F'])
+            st.markdown("<div class='info-label'>HUYẾT ÁP</div>", unsafe_allow_html=True)
+            bp = st.radio("", ['LOW', 'NORMAL', 'HIGH'])
+            st.markdown("<div class='info-label'>CHOLESTEROL</div>", unsafe_allow_html=True)
+            cholesterol = st.radio("", ['NORMAL', 'HIGH']
+            st.markdown("<div class='info-label'>TỶ LỆ Na/K/div>", unsafe_allow_html=True)
+            na_to_k_input = st.text_input("", value="15.0")
+```
+<img width="996" height="1147" alt="image" src="https://github.com/user-attachments/assets/cde592a1-a5a2-4ba5-b143-3b72be931beb" />
+
+- Ví dụ: cho người dùng điền đầy đủ các mục lấy dữ liệu từ file drug200.csv -> submit thì sẽ hiện kết quả như hình bên dưới gồm kết quả loại thuốc dự đoán và biểu đồ xác suất dự đoán xác suất cho từng loại thuốc. 
+<img width="2528" height="1152" alt="image" src="https://github.com/user-attachments/assets/a81537c9-e3cf-4cc0-92c9-b595a1c82606" />
+
+
+
+
+
 
 
 
