@@ -23,8 +23,8 @@
   - Q(s, a) là giá trị Q cho trạng thái s và hành động a.
   - alpha là tốc độ học, kiểm soát lượng thông tin mới ghi đè lên thông tin cũ.
   - R là phần thưởng ngay lập tức khi thực hiện hành động a trong trạng thái s.
-  - y là hệ số chiết khấu, biểu thị tầm quan trọng của phần thưởng trong tương lai.
-  - maxQ(s', alpha') là giá trị Q tối đa cho trạng thái tiếp theo s', biểu thị phần thưởng tốt nhất có thể đạt được từ trạng thái đó.
+  - gamma là hệ số chiết khấu, biểu thị tầm quan trọng của phần thưởng trong tương lai.
+  - maxQ(s', a') là giá trị Q tối đa cho trạng thái tiếp theo s', biểu thị phần thưởng tốt nhất có thể đạt được từ trạng thái đó.
 - Các bước thuật toán tăng cường:
 - Bước 1: Xác định kích thước và chướng ngại vật của Mê cung
 Xác định một maze_size biểu thị kích thước của mê cung. Trường hợp kích thước lưới 6x6. Một danh sách tọa độ biểu thị vị trí của chướng ngại vật trong mê cung cũng được chỉ định. Robot được định vị ở trạng thái ban đầu tại ô (0, 0) và hướng đến trạng thái mục tiêu tại ô (0, 5).
