@@ -66,7 +66,7 @@ def dfs (current, visited, path):
 
   ```
 
--Bước 4: Tìm đường bằng BFS (Breadth-First Search) (nếu có gọi)
+- Bước 4: Tìm đường bằng BFS (Breadth-First Search) (nếu có gọi)
   - Sử dụng hàng đợi (queue) để thực hiện tìm kiếm theo chiều rộng.
   - code chính:
 ```python
@@ -87,6 +87,30 @@ def bfs(self):
         # Không tìm thấy đường đi
         return None
 ```
+- Bước 5: Gọi hàm DFS hoặc BFS để tìm đường dẫn:
+  - code chính:
+  - BFS:
+```python
+planner = FSSP_BFS(grid, start, goal)
+path = planner.bfs()
+
+if path:
+    print(f"Path found: {path}")
+    planner.visualize(path)
+else:
+    print("No path found")
+```
+- DFS:
+```python
+if dfs(start, visited, path):
+    path.reverse()
+    print("Path found")
+    for position in path:
+        print(position)
+else:
+    print("No path found!")
+```
+  
 ## Hướng dẫn chạy
 1. Mở file Jupyter Notebook:  
    `2374802010582_TranNhuKhaY.ipynb`
@@ -94,6 +118,6 @@ def bfs(self):
 3. Kết quả cuối cùng sẽ hiển thị:
 - **Q-table cuối cùng** sau quá trình huấn luyện.
 - **Lộ trình (path) tối ưu** mà agent tìm được từ điểm bắt đầu đến đích
-- Hình vẽ mô phỏng đường đi tới goal
+- Hình vẽ mô phỏng đường đi tới goal.
 
 
